@@ -243,14 +243,22 @@ header .wrapper {
 
 .logo-heading {
   flex-basis: 20%;
+  order: 1;
+}
+
+.hamburger {
+  display: none;
+  order: 2;
 }
 
 nav {
   flex-basis: 70%;
+  order: 3;
 }
 
 .search {
   flex-basis: 10%;
+  order: 4;
 }
 
 
