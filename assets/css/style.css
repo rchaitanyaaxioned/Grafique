@@ -530,8 +530,6 @@ textarea {
 }
 
 /*styling for ask section end here*/
-
-
 /*=================================
   main styling ends here
 =================================*/
@@ -539,11 +537,124 @@ textarea {
 /*=================================
   footer styling starts here
 =================================*/
+footer {
+  color: #FFF;
+  background-color: #1F1F20;
+}
+
+/*styling for upper footer start here*/
+.upper-footer {
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #414142;
+}
+
+.uf-logo-heading {
+  display: flex;
+  align-items: center;
+  flex-basis: 20%;
+  justify-content: space-between;
+}
+
+.uf-logo-div {
+  padding-right: 7%;
+  border-right: 1px solid #BBBCBF;
+}
+
+.uf-logo-div img {
+  max-width: 170px;
+  max-height: 40px;
+}
+
+.uf-logo-heading span {
+  color: #BBBCBF;
+  font-size: 17px;
+  text-transform: capitalize;
+}
+
+.uf-nav {
+  flex-basis: 8%;
+}
+
+.bottom-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.bottom-nav li a {
+  color: #DFDFDF;
+  font-size: 17px;
+  text-transform: capitalize;
+  transition: color 0.5s ease;
+}
+
+.bottom-nav li:last-child a {
+  color: #888888;
+  transition: color 0.5s ease;
+}
+
+/*styling for upper footer start here*/
+/*styling for lower footer start here*/
+.lower-footer {
+  padding: 20px 0 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lower-footer p {
+  color: #888888;
+  text-transform: capitalize;
+}
+
+.blue {
+  color: #448EAD;
+}
+
+.lf-nav {
+  flex-basis: 8%;
+}
+
+.social-icon-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-icon-list li {
+  color: #888888;
+  transition: color 0.5s ease;
+}
+
+.social-icon-list li a {
+  text-indent: -9999px;
+}
 
 
+.fb::before {
+  padding-right: 1%;
+  content: "\f39e";
+  font-family: "Font Awesome 5 Brands";
+  text-indent: 0;
+}
 
+.tweet::before {
+  padding-right: 1%;
+  content: "\f099";
+  font-family: "Font Awesome 5 Brands";
+  text-indent: 0;
+}
 
+.insta::before {
+  padding-right: 1%;
+  content: "\f16d";
+  font-family: "Font Awesome 5 Brands";
+  text-indent: 0;
+}
 
+/*styling for lower footer end here*/
 /*=================================
   footer styling ends here
 =================================*/
@@ -577,7 +688,17 @@ textarea {
   }
 
   /*styling for form send btn end here*/
+  /*styling for bottom nav list start here*/
+  .bottom-nav li a:hover {
+    color: #54BBE6;
+  }
 
+  .social-icon-list li:hover {
+    color: #448EAD;
+    cursor: pointer;
+  }
+
+  /*styling for bottom nav list end here*/
 }
 
 
@@ -823,7 +944,78 @@ textarea {
   }
 
   /*styling for ask end here*/
+  /*styling for footer start here*/
+  .upper-footer {
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #414142;
+    flex-direction: column;
+    justify-content: center;
+  }
 
+  .uf-logo-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
+  .uf-logo-div {
+    padding: 0 0 30px 0;
+    border-right: none;
+  }
 
+  .uf-logo-heading span {
+    padding-bottom: 30px;
+    color: #BBBCBF;
+    font-size: 25px;
+    text-transform: capitalize;
+  }
+
+  .uf-nav {
+    width: 20%;
+  }
+
+  .bottom-nav li a {
+    color: #DFDFDF;
+    font-size: 25px;
+    text-transform: capitalize;
+    transition: color 0.5s ease;
+  }
+
+  .lower-footer {
+    padding: 20px 0 40px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .lower-footer p {
+    margin-top: 5px;
+    color: #888888;
+    font-size: 25px;
+    text-transform: capitalize;
+  }
+
+  .lf-nav {
+    width: 20%;
+    margin-top: 30px;
+  }
+
+  .social-icon-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .social-icon-list li {
+    color: #888888;
+    font-size: 25px;
+    transition: color 0.5s ease;
+  }
+
+  /*styling for footer end here*/
 }
