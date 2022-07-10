@@ -232,13 +232,14 @@ li {
   Header styling starts here
 =================================*/
 header {
-  background-color: #666;
+  border-bottom: 1px solid #BBBCBF;
   color: #FFF;
 }
 
 header .wrapper {
   padding: 35px 0;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -276,7 +277,7 @@ h1 img {
 
 /*styling for hamburger end here*/
 /*styling for top nav start here*/
-nav {
+.header-nav {
   display: flex;
   align-items: center;
   flex-basis: 69%;
@@ -298,6 +299,7 @@ nav {
   color: #FFF;
   font-size: 17px;
   text-transform: capitalize;
+  transition: color 1 ease;
 }
 
 /*styling for top nav end here*/
@@ -311,11 +313,6 @@ nav {
   order: 4;
 }
 
-.search:hover {
-  width: 1%;
-  flex-basis: 10%;
-}
-
 .search input {
   width: 10%;
   background-color: transparent;
@@ -326,11 +323,6 @@ nav {
   content: "\f3eb";
   font-family: "Font Awesome 5 Brands";
   text-indent: 0;
-}
-
-.search input:hover {
-  width: 100%;
-  background-color: #FFF;
 }
 
 /*styling for search div end here*/
@@ -369,81 +361,59 @@ nav {
 /* remove hover effet from mobile */
 @media only screen and (min-width: 1024px) {
 
-  /*styling for hamburger start here*/
-
-  /*
-  .heading {
-    position: relative;
+  /*styling for top nav start here*/
+  .top-nav a:hover {
+    color: #54BBE6;
   }
 
-  .heading h1 {
-    order: 1;
+  /*styling for top nav start here*/
+  /*styling for seach start here*/
+  .search:hover {
+    width: 1%;
+    flex-basis: 10%;
   }
 
-  .heading div {
-    order: 3;
-  }
-
-  .heading nav {
-    display: none;
-    position: absolute;
-    right: 0;
-    order: 2;
-  }
-
-  .nav-list {
-    margin-top: 110px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .bar {
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    display: block;
+  .search input:hover {
+    width: 100%;
     background-color: #FFF;
-    transition: all 0.3s ease-in-out;
-    text-indent: -9999px;
   }
 
-  .hamburger {
-    display: block;
-  }
+  /*styling for seach end here*/
 
-  .hamburger:hover+nav {
-    display: block;
-  }
-
-  .nav-list li {
-    padding: 5px;
-    background-color: #FFF;
-    font-size: 13px;
-    text-align: right;
-  }
-
-  .nav-list li a {
-    color: #098CFF;
-    text-decoration: underline;
-  }
-  */
-  /*styling for hamburger end here*/
 }
 
 
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+
+  /*styling for logo and heading start here*/
   .logo-heading {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-basis: 21%;
+    /* flex-basis: 33.33%; */
+    flex-direction: column;
+    justify-content: center;
     order: 2;
   }
 
+  h1 {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .logo-heading span {
+    margin-top: 10px;
+    color: #BBBCBF;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+
+  /*styling for logo and heading end here*/
+  /*styling for hamburger and header nav start here*/
   .hamburger {
     display: block;
     text-align: center;
+    /* flex-basis: 33.33%; */
     order: 1;
   }
 
@@ -457,28 +427,70 @@ nav {
     text-indent: -9999px;
   }
 
-  nav {
+  .header-nav {
     width: 50%;
+    display: none;
     position: absolute;
-    top: 70px;
+    top: 85px;
+    align-items: center;
+    flex-basis: none;
+    justify-content: start;
     order: 3;
+  }
+
+  .hamburger:hover+.header-nav {
+    display: block;
   }
 
   .top-nav {
     width: 50%;
     display: flex;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: #1F1F20;
     flex-direction: column;
     justify-content: center;
   }
 
+  .top-nav li {
+    width: 100%;
+    padding: 5px 0;
+    border-bottom: 1px solid #FFF;
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    transition: color 0.5s ease, border-bottom 0.5s ease;
+  }
+
+  .top-nav a {
+    color: #FFF;
+    transition: color 0.5s ease;
+  }
+
+  .top-nav li:hover {
+    border-bottom: 1px solid #54BBE6;
+    color: #54BBE6;
+  }
+
+  .top-nav a:hover {
+    color: #54BBE6;
+  }
+
+  /*styling for hamburger and header nav start here*/
+  /*styling for search start here*/
   .search {
-    width: 1%;
+    width: 10%;
     display: flex;
     align-items: center;
-    flex-basis: 1%;
+    flex-basis: 10%;
     justify-content: end;
     order: 4;
   }
+
+  .search:hover {
+    width: 10%;
+    flex-basis: 10%;
+  }
+
+  /*styling for search start here*/
+
 }
