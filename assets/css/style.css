@@ -182,6 +182,7 @@ sub {
 
 /*for all*/
 body {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: sans-serif;
 }
@@ -218,7 +219,14 @@ li {
 }
 
 .transition {
+  -webkit-transition: 1s all ease;
+  -o-transition: 1s all ease;
   transition: 1s all ease;
+}
+
+html,
+body {
+  width: 100%;
 }
 
 /*for wrapper*/
@@ -253,17 +261,32 @@ header {
 
 header .wrapper {
   padding: 35px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 /*styling for logo heading start here*/
 .logo-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-preferred-size: 21%;
   flex-basis: 21%;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
   order: 1;
 }
 
@@ -287,22 +310,37 @@ h1 img {
 /*styling for hamburger start here*/
 .hamburger {
   display: none;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
   order: 2;
 }
 
 /*styling for hamburger end here*/
 /*styling for top nav start here*/
 .header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-preferred-size: 69%;
   flex-basis: 69%;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: end;
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
   order: 3;
 }
 
 .top-nav {
   width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: end;
 }
 
@@ -314,23 +352,36 @@ h1 img {
   color: #FFF;
   font-size: 17px;
   text-transform: capitalize;
-  transition: color 1 ease;
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 /*styling for top nav end here*/
 /*styling for search div start here*/
 .search {
   width: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-preferred-size: 1%;
   flex-basis: 1%;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: end;
+  -webkit-box-ordinal-group: 5;
+  -ms-flex-order: 4;
   order: 4;
 }
 
 .search input {
   width: 10%;
   background-color: transparent;
+  -webkit-transition: width 0.4s ease-in-out;
+  -o-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
 
@@ -352,15 +403,23 @@ h1 img {
 .slider .wrapper {
   max-width: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 /*styling for slider heading start here*/
 .slider-heading {
   padding: 300px 0 100px 5.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #22242E;
+  -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -382,6 +441,8 @@ h1 img {
 .dash-list {
   width: 60%;
   margin-top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -390,8 +451,11 @@ h1 img {
   height: 1px;
   margin: 5px auto;
   display: block;
+  -ms-flex-item-align: end;
   align-self: flex-end;
   background-color: #FFF;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   text-indent: -9999px;
 }
@@ -404,6 +468,7 @@ h1 img {
 /*styling for img slider start here*/
 
 .img-slider {
+  -ms-flex-preferred-size: 75%;
   flex-basis: 75%;
 }
 
@@ -424,11 +489,14 @@ h1 img {
 }
 
 .why-us .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 /*styling for why us content start here*/
 .wu-content {
+  -ms-flex-preferred-size: 40%;
   flex-basis: 40%;
 }
 
@@ -457,6 +525,7 @@ h1 img {
 /*styling for why us content end here*/
 /*styling for why us images start here*/
 .wu-imgs {
+  -ms-flex-preferred-size: 60%;
   flex-basis: 60%;
   position: relative;
 }
@@ -485,9 +554,18 @@ h1 img {
 }
 
 .ask .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -513,6 +591,8 @@ textarea {
   border-bottom: 1px solid #B5B5B8;
   color: #B5B5B8;
   font-size: 20px;
+  -webkit-transition: color 0.5s ease, border-bottom 0.5s ease;
+  -o-transition: color 0.5s ease, border-bottom 0.5s ease;
   transition: color 0.5s ease, border-bottom 0.5s ease;
 }
 
@@ -526,6 +606,8 @@ textarea {
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 
@@ -545,16 +627,29 @@ footer {
 /*styling for upper footer start here*/
 .upper-footer {
   padding: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   border-bottom: 1px solid #414142;
 }
 
 .uf-logo-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-preferred-size: 20%;
   flex-basis: 20%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -575,12 +670,17 @@ footer {
 }
 
 .uf-nav {
+  -ms-flex-preferred-size: 8%;
   flex-basis: 8%;
 }
 
 .bottom-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -588,11 +688,15 @@ footer {
   color: #DFDFDF;
   font-size: 17px;
   text-transform: capitalize;
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 
 .bottom-nav li:last-child a {
   color: #888888;
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 
@@ -600,8 +704,14 @@ footer {
 /*styling for lower footer start here*/
 .lower-footer {
   padding: 20px 0 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -615,16 +725,23 @@ footer {
 }
 
 .lf-nav {
+  -ms-flex-preferred-size: 8%;
   flex-basis: 8%;
 }
 
 .social-icon-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .social-icon-list li {
   color: #888888;
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 
@@ -672,6 +789,7 @@ footer {
   /*styling for seach start here*/
   .search:hover {
     width: 1%;
+    -ms-flex-preferred-size: 10%;
     flex-basis: 10%;
   }
 
@@ -684,6 +802,7 @@ footer {
   /*styling for form send btn start here*/
   .input-submit input:hover {
     color: #54BBE6;
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
 
@@ -716,18 +835,35 @@ footer {
 
   header .wrapper {
     padding: 25px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
   /*styling for logo and heading start here*/
   .logo-heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     /* flex-basis: 33.33%; */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
   }
 
@@ -749,6 +885,8 @@ footer {
     display: block;
     text-align: center;
     /* flex-basis: 33.33%; */
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
   }
 
@@ -758,6 +896,8 @@ footer {
     margin: 5px auto;
     display: block;
     background-color: #FFF;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     text-indent: -9999px;
   }
@@ -767,9 +907,16 @@ footer {
     display: none;
     position: absolute;
     top: 85px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    flex-basis: none;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
     order: 3;
   }
 
@@ -779,10 +926,19 @@ footer {
 
   .top-nav {
     width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     background-color: #1F1F20;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
@@ -793,11 +949,15 @@ footer {
     background-color: #000;
     color: #FFF;
     text-align: center;
+    -webkit-transition: color 0.5s ease, border-bottom 0.5s ease;
+    -o-transition: color 0.5s ease, border-bottom 0.5s ease;
     transition: color 0.5s ease, border-bottom 0.5s ease;
   }
 
   .top-nav a {
     color: #FFF;
+    -webkit-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
     transition: color 0.5s ease;
   }
 
@@ -814,15 +974,25 @@ footer {
   /*styling for search start here*/
   .search {
     width: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-preferred-size: 10%;
     flex-basis: 10%;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: end;
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
     order: 4;
   }
 
   .search:hover {
     width: 10%;
+    -ms-flex-preferred-size: 10%;
     flex-basis: 10%;
   }
 
@@ -838,15 +1008,22 @@ footer {
   .slider-heading {
     width: 20%;
     padding: 200px 0 100px 5.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     background-color: #22242E;
+    -ms-flex-preferred-size: 20%;
     flex-basis: 20%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
   .img-slider {
     width: 80%;
+    -ms-flex-preferred-size: 80%;
     flex-basis: 80%;
   }
 
@@ -854,7 +1031,12 @@ footer {
 
   /*styling for why us start here*/
   .why-us .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -882,6 +1064,7 @@ footer {
 
   .wu-imgs {
     position: static;
+    -ms-flex-preferred-size: 60%;
     flex-basis: 60%;
     text-align: center;
   }
@@ -927,6 +1110,8 @@ footer {
     border-bottom: 1px solid #B5B5B8;
     color: #B5B5B8;
     font-size: 20px;
+    -webkit-transition: color 0.5s ease, border-bottom 0.5s ease;
+    -o-transition: color 0.5s ease, border-bottom 0.5s ease;
     transition: color 0.5s ease, border-bottom 0.5s ease;
   }
 
@@ -940,6 +1125,8 @@ footer {
     font-weight: bold;
     letter-spacing: 5px;
     text-transform: uppercase;
+    -webkit-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
     transition: color 0.5s ease;
   }
 
@@ -947,18 +1134,36 @@ footer {
   /*styling for footer start here*/
   .upper-footer {
     padding: 25px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-bottom: 1px solid #414142;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
   .uf-logo-heading {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
@@ -982,14 +1187,25 @@ footer {
     color: #DFDFDF;
     font-size: 25px;
     text-transform: capitalize;
+    -webkit-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
     transition: color 0.5s ease;
   }
 
   .lower-footer {
     padding: 20px 0 40px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
@@ -1006,14 +1222,22 @@ footer {
   }
 
   .social-icon-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
   .social-icon-list li {
     color: #888888;
     font-size: 25px;
+    -webkit-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
     transition: color 0.5s ease;
   }
 
