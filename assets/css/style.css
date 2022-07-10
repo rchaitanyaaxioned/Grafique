@@ -228,10 +228,25 @@ li {
   margin: 0 auto;
 }
 
+.text-cap {
+  text-transform: capitalize;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.line-break::before {
+  content: "\a";
+  white-space: pre;
+}
+
 /*=================================
   Header styling starts here
 =================================*/
 header {
+  width: 100%;
+  position: absolute;
   border-bottom: 1px solid #BBBCBF;
   color: #FFF;
 }
@@ -333,11 +348,137 @@ h1 img {
 /*=================================
   main styling starts here
 =================================*/
+/*styling for slider section start here*/
+.slider .wrapper {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+}
 
+/*styling for slider heading start here*/
+.slider-heading {
+  padding: 300px 0 100px 5.5%;
+  display: flex;
+  background-color: #22242E;
+  flex-basis: 25%;
+  flex-direction: column;
+}
 
+.slider-heading h2 {
+  margin-top: 115px;
+  color: #FFF;
+  font-size: 60px;
+  text-transform: uppercase;
+}
 
+.text-upper {
+  margin-top: 15px;
+  color: #FFF;
+  font-size: 25px;
+  letter-spacing: 53px;
+  text-transform: uppercase;
+}
 
+.dash-list {
+  width: 60%;
+  margin-top: 200px;
+  display: flex;
+}
 
+.dash {
+  width: 50px;
+  height: 1px;
+  margin: 5px auto;
+  display: block;
+  align-self: flex-end;
+  background-color: #FFF;
+  transition: all 0.3s ease-in-out;
+  text-indent: -9999px;
+}
+
+.active-dash {
+  height: 10px;
+}
+
+/*styling for slider heading end here*/
+/*styling for img slider start here*/
+
+.img-slider {
+  flex-basis: 75%;
+}
+
+.img-slider li,
+.img-slider li img {
+  height: 100%;
+}
+
+.img-slider :not(:first-child) {
+  display: none;
+}
+
+/*styling for img slider end here*/
+/*styling for slider section end here*/
+/*styling for why us section start here*/
+.why-us {
+  padding: 95px 0;
+}
+
+.why-us .wrapper {
+  display: flex;
+}
+
+/*styling for why us content start here*/
+.wu-content {
+  flex-basis: 40%;
+}
+
+.wu-content h2 {
+  padding-top: 80px;
+  color: #22242D;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.wu-content p {
+  padding: 60px 0 175px 0;
+  color: #C9C9CB;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.wu-span {
+  display: block;
+  color: #D1D1D4;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 30px;
+}
+
+/*styling for why us content end here*/
+/*styling for why us images start here*/
+.wu-imgs {
+  flex-basis: 60%;
+  position: relative;
+}
+
+.wu-img-2 img {
+  max-width: 670px;
+  max-height: 670px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.wu-img-1 img {
+  max-width: 355px;
+  max-height: 415px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/*styling for why us images end here*/
+/*styling for why us section end here*/
 
 
 
@@ -385,6 +526,22 @@ h1 img {
 
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+
+  /*styling for header start here*/
+  header {
+    width: 100%;
+    position: static;
+    background-color: #000;
+    border-bottom: none;
+    color: #FFF;
+  }
+
+  header .wrapper {
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   /*styling for logo and heading start here*/
   .logo-heading {
@@ -492,5 +649,79 @@ h1 img {
   }
 
   /*styling for search start here*/
+  /*styling for header start here*/
+
+  /*styling for slider start here*/
+  .slider {
+    padding-top: 250px;
+    background-color: #1F1F20;
+  }
+
+  .slider-heading {
+    width: 20%;
+    padding: 200px 0 100px 5.5%;
+    display: flex;
+    position: relative;
+    background-color: #22242E;
+    flex-basis: 20%;
+    flex-direction: column;
+  }
+
+  .img-slider {
+    width: 80%;
+    flex-basis: 80%;
+  }
+
+  /*styling for slider end here*/
+
+  /*styling for why us start here*/
+  .why-us .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wu-span {
+    display: block;
+    color: #D1D1D4;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 25px;
+  }
+
+  .wu-content h2 {
+    padding-top: 80px;
+    color: #22242D;
+    font-size: 100px;
+    text-transform: uppercase;
+  }
+
+  .wu-content p {
+    padding: 60px 0 60px 0;
+    color: #C9C9CB;
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  .wu-imgs {
+    position: static;
+    flex-basis: 60%;
+    text-align: center;
+  }
+
+  .wu-img-2 img {
+    max-width: 100%;
+    max-height: 670px;
+    position: static;
+  }
+
+  .wu-img-1 img {
+    padding: 30px 0 100px 0;
+    max-width: 70%;
+    max-height: 415px;
+    position: static;
+  }
+
+  /*styling for why us start here*/
+
 
 }
