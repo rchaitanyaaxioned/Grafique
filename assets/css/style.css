@@ -255,44 +255,29 @@ body {
 header {
   width: 100%;
   position: absolute;
-  border-bottom: 1px solid #BBBCBF;
+  border-bottom: 1px solid #494B52;
   color: #FFF;
 }
 
 header .wrapper {
   padding: 35px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 /*styling for logo heading start here*/
 .logo-heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-preferred-size: 21%;
   flex-basis: 21%;
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
   order: 1;
 }
 
 h1 {
-  padding-right: 7%;
-  border-right: 1px solid #BBBCBF;
+  padding-right: 8%;
+  border-right: 1px solid #494B52;
 }
 
 h1 img {
@@ -307,88 +292,100 @@ h1 img {
 }
 
 /*styling for logo heading end here*/
+
 /*styling for hamburger start here*/
 .hamburger {
   display: none;
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
   order: 2;
 }
 
+.bar {
+  width: 25px;
+  height: 3px;
+  display: block;
+  position: relative;
+  background-color: #FFF;
+  text-indent: -9999px;
+  transition: all 0.3s ease-in-out;
+}
+
+.bar:before {
+  width: 25px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: 0;
+  background: #FFF;
+  content: "";
+}
+
+.bar:after {
+  width: 25px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  background: #FFF;
+  content: "";
+}
+
 /*styling for hamburger end here*/
+
 /*styling for top nav start here*/
 .header-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-preferred-size: 69%;
-  flex-basis: 69%;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
+  flex-basis: 60%;
   justify-content: end;
-  -webkit-box-ordinal-group: 4;
-  -ms-flex-order: 3;
   order: 3;
 }
 
 .top-nav {
   width: 55%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
-}
-
-.top-nav li {
-  padding-right: 5%;
+  justify-content: space-between;
 }
 
 .top-nav a {
   color: #FFF;
   font-size: 17px;
   text-transform: capitalize;
-  -webkit-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 
 /*styling for top nav end here*/
+
 /*styling for search div start here*/
 .search {
-  width: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-preferred-size: 1%;
-  flex-basis: 1%;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
+  flex-basis: 1.5%;
   justify-content: end;
-  -webkit-box-ordinal-group: 5;
-  -ms-flex-order: 4;
   order: 4;
 }
 
-.search input {
-  width: 10%;
-  background-color: transparent;
-  -webkit-transition: width 0.4s ease-in-out;
-  -o-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
+.search-form {
+  display: flex;
 }
 
-.search input::before {
+.search-input {
+  width: 0;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.search-icon {
+  text-indent: -9999px;
+}
+
+.search-icon::before {
+  margin-right: 10%;
   content: "\f3eb";
+  color: #000;
+  float: right;
   font-family: "Font Awesome 5 Brands";
-  text-indent: 0;
 }
 
 /*styling for search div end here*/
@@ -400,50 +397,63 @@ h1 img {
   main styling starts here
 =================================*/
 /*styling for slider section start here*/
-.slider .wrapper {
+.slider-section .wrapper {
   max-width: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+}
+
+.slider {
   display: flex;
+  align-items: center;
+  background-color: #56595F;
+}
+
+.slider-li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #22242E;
+  flex-basis: 99%;
+}
+
+.slider-li-none {
+  display: none;
 }
 
 /*styling for slider heading start here*/
 .slider-heading {
-  padding: 300px 0 100px 5.5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin: 425px 0 0 5%;
   display: flex;
-  background-color: #22242E;
-  -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .slider-heading h2 {
-  margin-top: 115px;
   color: #FFF;
   font-size: 60px;
   text-transform: uppercase;
 }
 
 .text-upper {
-  margin-top: 15px;
+  margin: 15px 0;
   color: #FFF;
   font-size: 25px;
   letter-spacing: 53px;
   text-transform: uppercase;
 }
 
+/*styling for slider heading end here*/
+
+/*styling for dash list start here*/
 .dash-list {
-  width: 60%;
-  margin-top: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 100%;
+  margin: 300px 0 115px 0;
   display: flex;
+  align-items: flex-end;
+}
+
+.dash-list li {
+  margin: 0 1%;
 }
 
 .dash {
@@ -451,64 +461,48 @@ h1 img {
   height: 1px;
   margin: 5px auto;
   display: block;
-  -ms-flex-item-align: end;
   align-self: flex-end;
-  background-color: #FFF;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+  background-color: #3A3C45;
   transition: all 0.3s ease-in-out;
   text-indent: -9999px;
 }
 
 .active-dash {
   height: 10px;
+  background-color: #FFF;
 }
 
-/*styling for slider heading end here*/
-/*styling for img slider start here*/
-
-.img-slider {
-  -ms-flex-preferred-size: 75%;
+.slider-img {
+  height: 100%;
   flex-basis: 75%;
 }
 
-.img-slider li,
-.img-slider li img {
-  height: 100%;
-}
-
-.img-slider :not(:first-child) {
-  display: none;
-}
-
-/*styling for img slider end here*/
+/*styling for dash list end here*/
 /*styling for slider section end here*/
+
 /*styling for why us section start here*/
 .why-us {
-  padding: 95px 0;
+  margin: 98px 0;
 }
 
 .why-us .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 /*styling for why us content start here*/
 .wu-content {
-  -ms-flex-preferred-size: 40%;
   flex-basis: 40%;
 }
 
 .wu-content h2 {
-  padding-top: 80px;
+  margin: 80px 0 55px 0;
   color: #22242D;
   font-size: 60px;
   text-transform: uppercase;
 }
 
 .wu-content p {
-  padding: 60px 0 175px 0;
+  margin: 0 0 275px 0;
   color: #C9C9CB;
   font-size: 20px;
   line-height: 30px;
@@ -523,16 +517,16 @@ h1 img {
 }
 
 /*styling for why us content end here*/
+
 /*styling for why us images start here*/
 .wu-imgs {
-  -ms-flex-preferred-size: 60%;
   flex-basis: 60%;
   position: relative;
 }
 
 .wu-img-2 img {
-  max-width: 670px;
-  max-height: 670px;
+  max-width: 669px;
+  max-height: 669px;
   position: absolute;
   top: 0;
   right: 0;
@@ -540,7 +534,7 @@ h1 img {
 
 .wu-img-1 img {
   max-width: 355px;
-  max-height: 415px;
+  max-height: 420px;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -548,24 +542,16 @@ h1 img {
 
 /*styling for why us images end here*/
 /*styling for why us section end here*/
+
 /*styling for ask section start here*/
 .ask {
-  margin-top: 160px;
+  margin: 284px 0 70px 0;
 }
 
 .ask .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -576,27 +562,28 @@ h1 img {
   text-transform: uppercase;
 }
 
-form {
+.ask-form {
   width: 70%;
-  margin-top: 80px;
+  margin-top: 40px;
   text-align: center;
 }
 
-form input,
-textarea {
+.af-input {
   width: 100%;
-  margin-bottom: 60px;
-  padding-bottom: 20px;
+  height: 45px;
+  margin: 40px;
   border: none;
   border-bottom: 1px solid #B5B5B8;
   color: #B5B5B8;
   font-size: 20px;
-  -webkit-transition: color 0.5s ease, border-bottom 0.5s ease;
-  -o-transition: color 0.5s ease, border-bottom 0.5s ease;
   transition: color 0.5s ease, border-bottom 0.5s ease;
 }
 
-.input-submit input {
+.af-textarea {
+  height: 180px;
+}
+
+.af-submit {
   width: 20%;
   padding: 20px 0;
   border: none;
@@ -606,8 +593,6 @@ textarea {
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
-  -webkit-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 
@@ -627,35 +612,22 @@ footer {
 /*styling for upper footer start here*/
 .upper-footer {
   padding: 25px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   border-bottom: 1px solid #414142;
 }
 
 .uf-logo-heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-preferred-size: 20%;
   flex-basis: 20%;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .uf-logo-div {
   padding-right: 7%;
-  border-right: 1px solid #BBBCBF;
+  border-right: 1px solid #494B52;
 }
 
 .uf-logo-div img {
@@ -670,17 +642,12 @@ footer {
 }
 
 .uf-nav {
-  -ms-flex-preferred-size: 8%;
   flex-basis: 8%;
 }
 
 .bottom-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -688,30 +655,21 @@ footer {
   color: #DFDFDF;
   font-size: 17px;
   text-transform: capitalize;
-  -webkit-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 
 .bottom-nav li:last-child a {
   color: #888888;
-  -webkit-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 
-/*styling for upper footer start here*/
+/*styling for upper footer end here*/
+
 /*styling for lower footer start here*/
 .lower-footer {
   padding: 20px 0 40px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -725,50 +683,44 @@ footer {
 }
 
 .lf-nav {
-  -ms-flex-preferred-size: 8%;
   flex-basis: 8%;
 }
 
 .social-icon-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .social-icon-list li {
   color: #888888;
-  -webkit-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 
-.social-icon-list li a {
+.lf-anchor {
+  color: #888888;
   text-indent: -9999px;
 }
 
 
 .fb::before {
-  padding-right: 1%;
+  margin-right: 1%;
   content: "\f39e";
+  float: right;
   font-family: "Font Awesome 5 Brands";
-  text-indent: 0;
 }
 
 .tweet::before {
-  padding-right: 1%;
+  margin-right: 1%;
   content: "\f099";
+  float: right;
   font-family: "Font Awesome 5 Brands";
-  text-indent: 0;
 }
 
 .insta::before {
-  padding-right: 1%;
+  margin-right: 1%;
   content: "\f16d";
+  float: right;
   font-family: "Font Awesome 5 Brands";
-  text-indent: 0;
 }
 
 /*styling for lower footer end here*/
@@ -781,13 +733,13 @@ footer {
 @media only screen and (min-width: 1024px) {
 
   /*styling for top nav start here*/
-  .top-nav a:hover {
+  /* .top-nav a:hover {
     color: #54BBE6;
-  }
+  } */
 
   /*styling for top nav start here*/
   /*styling for seach start here*/
-  .search:hover {
+  /* .search:hover {
     width: 1%;
     -ms-flex-preferred-size: 10%;
     flex-basis: 10%;
@@ -796,26 +748,26 @@ footer {
   .search input:hover {
     width: 100%;
     background-color: #FFF;
-  }
+  } */
 
   /*styling for seach end here*/
   /*styling for form send btn start here*/
-  .input-submit input:hover {
+  /* .input-submit input:hover {
     color: #54BBE6;
     -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  }
+  } */
 
   /*styling for form send btn end here*/
   /*styling for bottom nav list start here*/
-  .bottom-nav li a:hover {
+  /* .bottom-nav li a:hover {
     color: #54BBE6;
   }
 
   .social-icon-list li:hover {
     color: #448EAD;
     cursor: pointer;
-  }
+  } */
 
   /*styling for bottom nav list end here*/
 }
@@ -825,7 +777,7 @@ footer {
 @media only screen and (max-width: 995px) {
 
   /*styling for header start here*/
-  header {
+  /* header {
     width: 100%;
     position: static;
     background-color: #000;
@@ -844,17 +796,16 @@ footer {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-  }
+  } */
 
   /*styling for logo and heading start here*/
-  .logo-heading {
+  /* .logo-heading {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    /* flex-basis: 33.33%; */
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -877,14 +828,13 @@ footer {
     color: #BBBCBF;
     font-size: 20px;
     text-transform: capitalize;
-  }
+  } */
 
   /*styling for logo and heading end here*/
   /*styling for hamburger and header nav start here*/
-  .hamburger {
+  /* .hamburger {
     display: block;
     text-align: center;
-    /* flex-basis: 33.33%; */
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
@@ -968,11 +918,11 @@ footer {
 
   .top-nav a:hover {
     color: #54BBE6;
-  }
+  } */
 
   /*styling for hamburger and header nav start here*/
   /*styling for search start here*/
-  .search {
+  /* .search {
     width: 10%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -994,13 +944,13 @@ footer {
     width: 10%;
     -ms-flex-preferred-size: 10%;
     flex-basis: 10%;
-  }
+  } */
 
   /*styling for search start here*/
   /*styling for header start here*/
 
   /*styling for slider start here*/
-  .slider {
+  /* .slider {
     padding-top: 250px;
     background-color: #1F1F20;
   }
@@ -1025,12 +975,12 @@ footer {
     width: 80%;
     -ms-flex-preferred-size: 80%;
     flex-basis: 80%;
-  }
+  } */
 
   /*styling for slider end here*/
 
   /*styling for why us start here*/
-  .why-us .wrapper {
+  /* .why-us .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1080,11 +1030,11 @@ footer {
     max-width: 70%;
     max-height: 415px;
     position: static;
-  }
+  } */
 
   /*styling for why us start here*/
   /*styling for ask start here*/
-  .ask {
+  /* .ask {
     margin-top: 100px;
   }
 
@@ -1128,11 +1078,11 @@ footer {
     -webkit-transition: color 0.5s ease;
     -o-transition: color 0.5s ease;
     transition: color 0.5s ease;
-  }
+  } */
 
   /*styling for ask end here*/
   /*styling for footer start here*/
-  .upper-footer {
+  /* .upper-footer {
     padding: 25px 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1239,7 +1189,7 @@ footer {
     -webkit-transition: color 0.5s ease;
     -o-transition: color 0.5s ease;
     transition: color 0.5s ease;
-  }
+  } */
 
   /*styling for footer end here*/
 }

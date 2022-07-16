@@ -47,7 +47,7 @@
         <!--serach bar start here-->
         <div class="search">
           <form class="search-form" action="#FIXME" method="post">
-            <input type="text" name="search">
+            <input type="text" name="search" class="search-input">
             <span class="search-icon">search</span>
           </form>
         </div>
@@ -78,43 +78,63 @@
                 <!--dash list end here-->
               </div>
               <!--slider heading end here-->
-              <img src="assets/Images/banner.jpg" alt="Building Image">
+              <!--slider img start here-->
+              <figure class="slider-img">
+                <img src="assets/Images/banner.jpg" alt="Building Image">
+              </figure>
+              <!--slider img end here-->
             </li>
-            <li class="slider-li">
+            <li class="slider-li slider-li-none">
               <!--slider heading start here-->
               <div class="slider-heading">
                 <h2>build <span class="text-bold line-break">exclusive</span></h2>
                 <span class="text-upper">edifices</span>
               </div>
               <!--slider heading end here-->
-              <img src="assets/Images/img2.jpg" alt="Building Image">
+              <!--slider img start here-->
+              <figure class="slider-img">
+                <img src="assets/Images/img2.jpg" alt="Building Image">
+              </figure>
+              <!--slider img end here-->
             </li>
-            <li class="slider-li">
+            <li class="slider-li slider-li-none">
               <!--slider heading start here-->
               <div class="slider-heading">
                 <h2>build <span class="text-bold line-break">exclusive</span></h2>
                 <span class="text-upper">edifices</span>
               </div>
               <!--slider heading end here-->
-              <img src="assets/Images/banner-slider1.jpg" alt="Building Image">
+              <!--slider img start here-->
+              <figure class="slider-img">
+                <img src="assets/Images/banner-slider1.jpg" alt="Building Image">
+              </figure>
+              <!--slider img end here-->
             </li>
-            <li class="slider-li">
+            <li class="slider-li slider-li-none">
               <!--slider heading start here-->
               <div class="slider-heading">
                 <h2>build <span class="text-bold line-break">exclusive</span></h2>
                 <span class="text-upper">edifices</span>
               </div>
               <!--slider heading end here-->
-              <img src="assets/Images/img2.jpg" alt="Building Image">
+              <!--slider img start here-->
+              <figure class="slider-img">
+                <img src="assets/Images/img2.jpg" alt="Building Image">
+              </figure>
+              <!--slider img end here-->
             </li>
-            <li class="slider-li">
+            <li class="slider-li slider-li-none">
               <!--slider heading start here-->
               <div class="slider-heading">
                 <h2>build <span class="text-bold line-break">exclusive</span></h2>
                 <span class="text-upper">edifices</span>
               </div>
               <!--slider heading end here-->
-              <img src="assets/Images/banner-slider1.jpg" alt="Building Image">
+              <!--slider img start here-->
+              <figure class="slider-img">
+                <img src="assets/Images/banner-slider1.jpg" alt="Building Image">
+              </figure>
+              <!--slider img end here-->
             </li>
           </ul>
           <!--slider end here-->
@@ -150,18 +170,19 @@
         <div class="wrapper">
           <h2>ask <span class="text-bold line-break">a question</span></h2>
           <!--ask form start here-->
-          <form action="#FIXME" method="post">
-            <div class="input-name">
-              <input type="text" name="name" placeholder="Name: ">
+          <form action="#FIXME" method="post" class="ask-form">
+            <div>
+              <input type="text" name="name" placeholder="Name: " class="af-input">
             </div>
-            <div class="input-email">
-              <input type="email" name="email" placeholder="E-mail address: ">
+            <div>
+              <input type="email" name="email" placeholder="E-mail address: " class="af-input">
             </div>
-            <div class="input-question">
-              <textarea name="question" rows="10" cols="50" placeholder="Question "></textarea>
+            <div>
+              <textarea name="question" rows="10" cols="50" placeholder="Question "
+                class="af-input af-textarea"></textarea>
             </div>
-            <div class="input-submit">
-              <input type="submit" value="send">
+            <div>
+              <input type="submit" value="send" class="af-submit">
             </div>
           </form>
           <!--ask form end here-->
@@ -199,9 +220,9 @@
           <!--lower footer nav start here-->
           <nav class="lf-nav">
             <ul class="social-icon-list">
-              <li class="fb"><a href="#FIXME" title="Facebook">facebook</a></li>
-              <li class="tweet"><a href="#FIXME" title="Tweeter">tweeter</a></li>
-              <li class="insta"><a href="#FIXME" title="Instagram">instagram</a></li>
+              <li><a href="#FIXME" title="Facebook" class="lf-anchor fb">facebook</a></li>
+              <li><a href="#FIXME" title="Tweeter" class="lf-anchor tweet">tweeter</a></li>
+              <li><a href="#FIXME" title="Instagram" class="lf-anchor insta">instagram</a></li>
             </ul>
           </nav>
           <!--lower footer nav start here-->
