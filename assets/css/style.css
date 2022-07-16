@@ -348,11 +348,17 @@ h1 img {
   justify-content: space-between;
 }
 
-.top-nav a {
+.top-nav-a {
   color: #FFF;
   font-size: 17px;
   text-transform: capitalize;
-  transition: color 0.5s ease;
+  transition: color 0.5s ease, transform 0.5s ease, border-bottom 0.5s ease;
+}
+
+.top-nav-a:hover {
+  color: #448EAD;
+  transform: scale(1.2, 1.2);
+  border-bottom: 1px solid #448EAD;
 }
 
 /*styling for top nav end here*/
@@ -579,6 +585,12 @@ h1 img {
   transition: color 0.5s ease, border-bottom 0.5s ease;
 }
 
+.af-input:focus {
+  border: none;
+  border-bottom: 1px solid #448EAD;
+  color: #448EAD;
+}
+
 .af-textarea {
   height: 180px;
 }
@@ -593,7 +605,13 @@ h1 img {
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
-  transition: color 0.5s ease;
+  transition: color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.af-submit:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #448EAD;
+  transform: scale(1.2, 1.2);
 }
 
 /*styling for ask section end here*/
@@ -651,16 +669,21 @@ footer {
   justify-content: space-between;
 }
 
-.bottom-nav li a {
+.bn-anchor {
   color: #DFDFDF;
   font-size: 17px;
   text-transform: capitalize;
-  transition: color 0.5s ease;
+  transition: color 0.5s ease, transform 0.5s ease, border-bottom 0.5s ease;
 }
 
-.bottom-nav li:last-child a {
+.bn-blog {
   color: #888888;
-  transition: color 0.5s ease;
+}
+
+.bn-anchor:hover {
+  color: #448EAD;
+  transform: scale(1.2, 1.2);
+  border-bottom: 1px solid #448EAD;
 }
 
 /*styling for upper footer end here*/
@@ -697,6 +720,7 @@ footer {
 }
 
 .lf-anchor {
+  display: inline-block;
   color: #888888;
   text-indent: -9999px;
 }
